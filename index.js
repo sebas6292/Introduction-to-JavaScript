@@ -54,8 +54,10 @@ Do the following:
 
    HINT: look up the Number method
 */
-const str = "1999"
-str.typeof int = 1999
+let str = "1999";
+let int = parseInt(str)
+console.log(int);
+
 
 
 /*
@@ -67,8 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b
   }
 
 
@@ -83,8 +85,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    let humanYears = 7 * age;
+    return humanYears; 
 }
 
 
@@ -158,9 +161,11 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let compChoice = Math.random(Math.floor());
+let userChoice = Math.random(Math.floor())
 
 function game(user, computer){
-    /*add your code here*/
+    
 }
   
   
@@ -176,7 +181,7 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(){
     /*add your code here*/
   }
 
@@ -226,10 +231,20 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score <= 100){
+    return "You got an A";
+  }else if(socre <= 89){
+    return "You got a B";
+  }else if (socre <= 79){
+    return "You got a C";
+  }else if (score <= 69){
+    return "You got a D";
+  } else {
+    return "You got an F";
   }
-  
+  }
+ 
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
