@@ -17,6 +17,10 @@ Do the following:
 
    HINT: no function required
 */
+   const votingAge = 18
+   if (votingAge >= 8){
+   console.log(votingAge);
+   }
 
 
 
@@ -30,7 +34,12 @@ Do the following:
 
    HINT: no function required
 */
+const couch = 120;
+const chair = 60;
 
+if (couch > chair) {
+  console.log('couch');
+}
 
 
 
@@ -45,8 +54,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+const str = "1999"
+str.typeof int = 1999
 
 
 /*
