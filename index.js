@@ -161,13 +161,38 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let compChoice = Math.random(Math.floor());
-let userChoice = Math.random(Math.floor())
+let computer = Math.random();
+if (computer >= 0 && computer > 0.333){
+  computer = 'Rock';
+} else if (computer >= 0.333 && computer < 0.666){
+  computer = 'Paper';
+} else if (computer >= 0.666 && computer <= 1) {
+  computer = 'Scissor';
+}
 
 function game(user, computer){
     
+  if(computer === 'Rock' && user === 'Rock'){
+    return 'Its a tie';
+  } else if (computer === 'Rock' && user === 'Paper'){
+    return 'You win';
+  } else if (computer === 'Rock' && user === 'Scissor'){
+    return 'You lose';
+  } else if (computer === 'Paper' && user === 'Paper'){
+    return 'Its a tie';
+  } else if (computer === 'Paper' && user === 'Rock'){
+    return 'You win';
+  } else if (computer === 'Paper' && user === 'Scissor'){
+    return 'You lose';
+  } else if (computer === 'Scisspr' && user === 'Scissor'){
+    return 'Its a tie';
+  } else if (computer === 'Scissor' && user === 'Paper'){
+    return 'You win';
+  } else if (computer === 'Scissor' && user === 'Rock'){
+    return 'You lose'
+  }
 }
-  
+ 
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -182,7 +207,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-    return km/1.609;
+    return km * 0.621371;
   }
 
 
@@ -213,9 +238,9 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num){
         for(let i=num; i > 0; i--){
-          return "`${num} bottles of soda on the wall, `${num} bottles of soda, take one down pass it around `${num - 1} bottles of soda on the wall"
-        }
-  }
+          return `${num}` +  'bottles of soda on the wall,' + `${num} ` + 'bottles of soda, take one down pass it around' + `${num - 1}` + 'bottles of soda on the wall'
+        };
+  };
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -234,16 +259,16 @@ Using the grade function below do the following:
 */
   
 function grade(score){
-  if (score <= 100){
-    return "You got an A";
-  }else if(socre <= 89){
-    return "You got a B";
-  }else if (socre <= 79){
-    return "You got a C";
-  }else if (score <= 69){
-    return "You got a D";
+  if (score >= 90){
+    return "you got an A";
+  }else if(score < 90 && score >= 80){
+    return "you got a B";
+  }else if (score < 79 && score >= 70){
+    return "you got a C";
+  }else if (score < 69 && score >= 60){
+    return "you got a D";
   } else {
-    return "You got an F";
+    return "you got an F";
   }
   }
  
